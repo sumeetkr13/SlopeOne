@@ -1,0 +1,17 @@
+{
+    "contents" : "#\n#auther vedraiyani\n#title slopeone algorythm\n#\n\n#read dataset\ndata <- read.csv(\"u.data\",FALSE,\"\\t\");\n\n#sort users and item\nusers<-sort(unique(data$V1));\nitems<-sort(unique(data$V2));\n\n# create nullmatrix\nrating_matrix<-matrix(0,length(users),length(items));\n\n#matrix fill up\nfor(i in 1:length(data$V1)){\n  rating_matrix[data[i,1],data[i,2]]<-data[i,3];  \n}",
+    "created" : 1454961941668.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2653126685",
+    "id" : "C183F0B",
+    "lastKnownWriteTime" : 1454960184,
+    "path" : "F:/myrepo/R/slope_one/generateRatingMatrix.r",
+    "project_path" : "generateRatingMatrix.r",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

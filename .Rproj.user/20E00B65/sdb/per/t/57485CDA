@@ -1,0 +1,17 @@
+{
+    "contents" : "#\n#auther vedraiyani\n#\n#dev value of given item\n# @param j item \n# @return deviation vector of item j\n#\n\ndevfun <- function(j){\n  dev=c();\n  \n  #check for each item\n  for(i in 1:length(items)){\n    s=0;\n    u=c();\n    \n    #check for each users\n    u=intersect(users[rating_matrix[,i]!=0],users[rating_matrix[,j]!=0])\n    #for each co-related user take sum of item i and j rating difference and take it's mean\n    s=sum(rating_matrix[u,j])-sum(rating_matrix[u,i])\n    if(length(u)!=0){\n      s=s/length(u);\n    }\n    dev<-append(dev,s);\n    \n  }\n  return (dev);\n}",
+    "created" : 1454961929535.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1415456691",
+    "id" : "57485CDA",
+    "lastKnownWriteTime" : 1454961510,
+    "path" : "F:/myrepo/R/slope_one/devfun.R",
+    "project_path" : "devfun.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
