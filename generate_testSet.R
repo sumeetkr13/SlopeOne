@@ -44,4 +44,16 @@
       }
     } 
   }
+  
+  #free memory
+  remove(n)
+  remove(m)
+  remove(ui)
+  remove(ii)
+  remove(u)
+  remove(i)
+  remove(count)
+  remove(item_count)
+  remove(test_items)
+  remove(test_users)
 #}
