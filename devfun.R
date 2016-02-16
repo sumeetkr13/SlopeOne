@@ -1,5 +1,5 @@
 #
-#auther vedraiyani
+#author vedraiyani
 #
 #dev value of given item
 # @param j item 

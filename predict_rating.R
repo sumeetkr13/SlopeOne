@@ -1,5 +1,5 @@
 #
-#auther vedraiyani
+#author vedraiyani
 #
 #count rating for given itemby given user
 # @param u user

@@ -1,17 +1,22 @@
 #
-#auther vedraiyani
+#author vedraiyani
 #title slopeone algorythm
 #
 
-#read dataset
-data <- read.csv("u.data",FALSE,"\t");
-
 #sort users and item
-users<-sort(unique(data$V1));
-items<-sort(unique(data$V2));
+user_data <- read.csv("./ml-100k/u.user",FALSE,"|");
+users<-user_data$V1;
+remove(user_data);
 
-# create nullmatrix
+item_data <- read.csv("./ml-100k/u.item",FALSE,"|");
+items<-item_data$V1;
+remove(item_data);
+
+# init rating_matrix
 rating_matrix<-matrix(0,length(users),length(items));
+
+#read dataset
+data <- read.csv("./ml-100k/u2.base",FALSE,"\t");
 
 #matrix fill up
 for(i in 1:length(data$V1)){
