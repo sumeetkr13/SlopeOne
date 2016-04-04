@@ -19,26 +19,22 @@
   test_items=sample(items);
   
   count=0
-  for(u in 1:length(test_users)){
+  for(u in test_users){
     item_count=0;
-    for(i in 1:length(test_items)){
+    for(i in test_items){
       
       if(item_count==m){
         break();
       }
-      
-      ui=test_users[u];#user index
-      ii=test_items[i];#item index
-      
-      if(rating_matrix[ui,ii]!=0){
+      if(rating_matrix[u,i]!=0){
       
           count=count+1;
           
-          testSet[count,1]=ui;
-          testSet[count,2]=ii;
-          testSet[count,3]=rating_matrix[ui,ii];
+          testSet[count,1]=u;
+          testSet[count,2]=i;
+          testSet[count,3]=rating_matrix[u,i];
           
-          rating_matrix[ui,ii]=0;
+          rating_matrix[u,i]=0;
           
           item_count=item_count+1;
       }
@@ -48,8 +44,6 @@
   #free memory
   remove(n)
   remove(m)
-  remove(ui)
-  remove(ii)
   remove(u)
   remove(i)
   remove(count)
